@@ -1,0 +1,377 @@
+/**********************************
+      STYLE GENERAL
+*********************************/
+
+/*** Palette
+Rouge : #74bfc2;
+Orange : #eb5850;
+Jaune : #464e50;
+Gris foncé : #fbab22;
+Gris moyen : ;
+***/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Dosis", Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+body, section, .titretbouton {
+  display: flex;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #212121;
+}
+
+@font-face {
+    font-family: "Bakery";
+    src: url('bakery.ttf');
+}
+
+section {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*** Style boutons et blocs titre et bouton ***/
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.titretbouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titretbouton, .titretbouton button {
+  color: white;
+}
+
+.groupebouton {
+  animation: apparait 0.5s ease-in-out;
+}
+
+.titretbouton button {
+  background: none;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  z-index: 2;
+}
+
+.animbouton {
+  z-index: 1;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  height: 1px;
+  width: 1px;
+  margin: 21.5px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.groupebouton:hover .animbouton {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  height: 44px;
+  width: 44px;
+  margin: 0;
+}
+
+.titretbouton button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 4em;
+  animation: apparait 0.5s ease-in-out;
+}
+
+#blocabout .titretbouton, #blocprojets .titretbouton, #bloccontact .titretbouton {
+  flex-direction: column;
+}
+
+/*** Style scrollbar Chrome & Safari ***/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track-piece {
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+}
+
+/**********************************
+      ANIMATIONS
+*********************************/
+
+@keyframes apparait {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: inline;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/**********************************
+      ANIMATIONS JS
+*********************************/
+
+/*** Dimensions ***/
+
+.projets#blocabout, .about#blocprojets, .contact#blocnom {
+  width: 89vw;
+  height: 20vh;
+}
+
+.projets#bloccontact, .about#blocnom, .contact#blocprojets {
+  width: 11vw;
+  height: 80vh;
+}
+
+.projets#blocnom, .about#bloccontact, .contact#blocabout {
+  width: 11vw;
+  height: 20vh;
+}
+
+.projets#blocprojets, .about#blocabout, .contact#bloccontact {
+  width: 89vw;
+  height: 80vh;
+}
+
+.projets#blocnom, .projets#blocabout, .about#blocabout, .about#blocnom, .contact#blocnom, .contact#blocabout {
+  top: 0;
+}
+
+.projets#blocprojets, .projets#bloccontact, .contact#blocprojets, .contact#bloccontact {
+  top: 20vh;
+}
+
+.about#blocprojets, .about#bloccontact {
+  top: 80vh;
+}
+
+/*** Boutons ***/
+
+.projets#boutonprojets, .about#boutonabout, .contact#boutoncontact, .about#blocabout .animbouton, .projets#blocprojets .animbouton, .contact#bloccontact .animbouton {
+  display: none;
+}
+
+.projets#boutonabout, .projets#boutoncontact, .about#boutonprojets, .about#boutoncontact, .contact#boutonprojets .contact#boutonabout {
+  display: inline;
+}
+
+.about#boutonprojets i, .contact#boutonprojets i, .projets#boutoncontact i, .about#boutoncontact i, .projets#boutonabout i, .contact#boutonabout i {
+  transition: transform 0.5s;
+}
+
+/*** Blocs contenu ***/
+
+.projets #contenuabout, .projets #contenucontact, .about #contenuprojets, .about #contenucontact, .contact #contenuprojets, .contact #contenuabout {
+  display: none;
+}
+
+.projets#blocprojets, .about#blocabout, .contact#bloccontact {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.contenu {
+  margin-top: 5vh;
+  padding-right: 2%;
+  height: 65vh;
+  width: 70vw;
+  animation: apparait 2s ease-in-out;
+  overflow-y: auto;
+}
+
+.about#blocabout h2, .contact#bloccontact h2 {
+  position: absolute;
+  top: 4.5vh;
+  left: 7vw;
+  animation: apparait 2s ease-in-out;
+}
+
+.projets#blocprojets h2 {
+  position: absolute;
+  top: 3vh;
+  left: 7vw;
+  animation: apparait 2s ease-in-out;
+}
+
+/*** Titres ***/
+
+.about#blocprojets h2, .contact#blocprojets h2, .projets#blocabout h2, .contact#blocabout h2, .projets#bloccontact h2, .about#bloccontact h2 {
+  font-family: "Bakery", cursive;
+  font-size: 2.5em;
+  line-height: 1;
+  font-weight: lighter;
+}
+
+/**********************************
+      STYLE BLOC NOM
+*********************************/
+
+#blocnom {
+  left: 0;
+  text-align: center;
+  font-family: "Bakery", cursive;
+  font-size: 1.8em;
+}
+
+.projets#blocnom:hover, .about#blocnom:hover, .contact#blocnom:hover {
+  background-color: #FFC107;
+}
+
+.projets#blocnom {
+  background-color: #212121;
+}
+
+.contact#blocnom, .about#blocnom {
+  background-color: #363F45;
+}
+
+#blocnom h1 {
+  font-weight: lighter;
+  line-height: 0.7;
+}
+
+/**********************************
+      STYLE BLOC PROJETS
+*********************************/
+
+#blocprojets {
+  right: 0;
+}
+
+.about#blocprojets, .contact#blocprojets {
+  background-color: #363F45;
+}
+
+.projets#blocprojets, .about#blocprojets:hover, .contact#blocprojets:hover {
+  background-color: #F44336;
+}
+
+.contact#boutonprojets i {
+  transform: rotate(-90deg);
+}
+
+.projets#blocprojets p {
+  font-style: italic;
+}
+
+/***Style vidéos***/
+
+.blocvideo {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: right;
+}
+
+.blocvideo p {
+  align-self: flex-end;
+}
+
+video {
+  height: 58vh;
+  border: 3px solid white;
+}
+
+/**********************************
+      STYLE BLOC CONTACT
+*********************************/
+
+#bloccontact {
+  left: 0;
+}
+
+.projets#bloccontact {
+  background-color: #363F45;
+}
+
+.about#bloccontact {
+  background-color: #212121;
+}
+
+.contact#bloccontact, .projets#bloccontact:hover, .about#bloccontact:hover {
+  background-color: #FF9800;
+}
+
+.about#boutoncontact i {
+  transform: rotate(-45deg);
+}
+
+/**********************************
+      STYLE BLOC ABOUT
+*********************************/
+
+#blocabout {
+  right: 0;
+}
+
+.projets#blocabout {
+  background-color: #363F45;
+}
+
+.contact#blocabout {
+  background-color: #212121;
+}
+
+.about#blocabout, .projets#blocabout:hover, .contact#blocabout:hover {
+  background-color: #FF5722;
+}
+
+.contact#boutonabout i {
+  transform: rotate(45deg);
+}
+
+/**********************************
+      HACKS CHROME
+*********************************/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .projets #contenuprojets, .about #contenuabout, .contact #contenucontact {
+    /*margin-top: 5vh;*/
+  }
+}
