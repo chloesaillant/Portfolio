@@ -3,11 +3,12 @@
 *********************************/
 
 /*** Palette
-Rouge : #74bfc2;
-Orange : #eb5850;
-Jaune : #464e50;
-Gris foncé : #fbab22;
-Gris moyen : ;
+Rouge : #F44336;
+Orange : #FF5722;
+Orange clair : #FF9800;
+Jaune : #FFC107;
+Gris : #363F45;
+Gris foncé : #212121;
 ***/
 
 *, *:before, *:after {
@@ -18,12 +19,13 @@ Gris moyen : ;
 
 html {
   box-sizing: border-box;
-  color: white;
+  color: #fff;
   font-family: "Dosis", Helvetica, sans-serif;
 }
 
 body {
   position: relative;
+  background-color: #363F45;
 }
 
 body, section, .titretbouton {
@@ -33,11 +35,6 @@ body, section, .titretbouton {
 ::selection {
   background: rgba(255, 255, 255, 0.2);
   color: #212121;
-}
-
-@font-face {
-    font-family: "Bakery";
-    src: url('bakery.ttf');
 }
 
 section {
@@ -50,6 +47,23 @@ section {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.3em;
+  font-weight: lighter;
 }
 
 /*** Style boutons et blocs titre et bouton ***/
@@ -67,7 +81,7 @@ button {
 }
 
 .titretbouton, .titretbouton button {
-  color: white;
+  color: #fff;
 }
 
 .groupebouton {
@@ -128,7 +142,7 @@ button {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: white;
+  background-color: #fff;
 }
 
 /**********************************
@@ -149,11 +163,88 @@ button {
   }
 }
 
+/*** Animation svg ***/
+
+/*"Chloe"*/
+#path4 {
+  stroke-dasharray: 1600;
+  animation: dash2 6s linear forwards;
+}
+/*accent "e"*/
+#path5 {
+  stroke-dasharray: 600;
+  animation: dash1 4s linear backwards;
+  animation-delay: 1.7s;
+}
+/*"S"*/
+#path1 {
+  stroke-dasharray: 600;
+  animation: dash1 3s linear backwards;
+  animation-delay: 2s;
+}
+/*"aillant"*/
+#path2 {
+  stroke-dasharray: 1600;
+  animation: dash2 6s linear backwards;
+  animation-delay: 2.5s;
+}
+/*point "i"*/
+#path6 {
+  animation: point 0.5s linear backwards;
+  animation-delay: 3s;
+}
+/*barre "t"*/
+#path3 {
+  stroke-dasharray: 600;
+  animation: dash1 3s linear backwards;
+  animation-delay: 4.5s;
+}
+
+@keyframes dash1 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 600;
+  } 50% {
+    opacity: 1;
+  } 100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash2 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 1600;
+  } 50% {
+    opacity: 1;
+    } 100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes point {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
 /**********************************
       ANIMATIONS JS
 *********************************/
 
 /*** Dimensions ***/
+
+.intro#blocnom {
+  width: 100vw;
+  height: 100vh;
+}
+
+.intro#blocprojets, .intro#blocabout, .intro#bloccontact {
+  width: 0;
+  height: 0;
+}
 
 .projets#blocabout, .about#blocprojets, .contact#blocnom {
   width: 89vw;
@@ -175,7 +266,7 @@ button {
   height: 80vh;
 }
 
-.projets#blocnom, .projets#blocabout, .about#blocabout, .about#blocnom, .contact#blocnom, .contact#blocabout {
+.intro#blocnom, .projets#blocnom, .projets#blocabout, .about#blocabout, .about#blocnom, .contact#blocnom, .contact#blocabout {
   top: 0;
 }
 
@@ -187,9 +278,14 @@ button {
   top: 80vh;
 }
 
+.intro#blocprojets, .intro#blocabout, .intro#bloccontact {
+  top: 100vh;
+  left: 100vw;
+}
+
 /*** Boutons ***/
 
-.projets#boutonprojets, .about#boutonabout, .contact#boutoncontact, .about#blocabout .animbouton, .projets#blocprojets .animbouton, .contact#bloccontact .animbouton {
+.projets#boutonintro, .projets#boutonprojets, .about#boutonintro, .about#boutonabout, .contact#boutoncontact, .about#blocabout .groupebouton, .contact#boutonintro, .projets#blocprojets .groupebouton, .contact#bloccontact .groupebouton {
   display: none;
 }
 
@@ -203,11 +299,11 @@ button {
 
 /*** Blocs contenu ***/
 
-.projets #contenuabout, .projets #contenucontact, .about #contenuprojets, .about #contenucontact, .contact #contenuprojets, .contact #contenuabout {
+.intro #contenuprojets, .intro #contenuabout, .intro #contenucontact, .projets #contenuabout, .projets #contenucontact, .about #contenuprojets, .about #contenucontact, .contact #contenuprojets, .contact #contenuabout {
   display: none;
 }
 
-.projets#blocprojets, .about#blocabout, .contact#bloccontact {
+.intro#blocnom, .projets#blocprojets, .about#blocabout, .contact#bloccontact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -239,11 +335,20 @@ button {
 
 /*** Titres ***/
 
-.about#blocprojets h2, .contact#blocprojets h2, .projets#blocabout h2, .contact#blocabout h2, .projets#bloccontact h2, .about#bloccontact h2 {
-  font-family: "Bakery", cursive;
-  font-size: 2.5em;
-  line-height: 1;
-  font-weight: lighter;
+.projets#blocprojets h2::before {
+  content: "Projets";
+}
+
+.about#blocabout h2::before {
+  content: "About";
+}
+
+.contact#bloccontact h2::before {
+  content: "Contact";
+}
+
+.projets#blocprojets h2 .motsvg, .about#blocabout h2 .motsvg, .contact#bloccontact h2 .motsvg {
+  display: none;
 }
 
 /**********************************
@@ -253,11 +358,17 @@ button {
 #blocnom {
   left: 0;
   text-align: center;
-  font-family: "Bakery", cursive;
-  font-size: 1.8em;
 }
 
-.projets#blocnom:hover, .about#blocnom:hover, .contact#blocnom:hover {
+.intro#blocnom svg {
+  width: 30vw;
+}
+
+.projets#blocnom svg, .about#blocnom svg, .contact#blocnom svg {
+  width: 9vw;
+}
+
+.intro#blocnom, .projets#blocnom:hover, .about#blocnom:hover, .contact#blocnom:hover {
   background-color: #FFC107;
 }
 
@@ -272,6 +383,24 @@ button {
 #blocnom h1 {
   font-weight: lighter;
   line-height: 0.7;
+}
+
+.intro button {
+  font-family: inherit;
+  color: #fff;
+  padding: 0.7% 2%;
+  margin-top: 6vh;
+  font-size: 1.5em;
+  background: none;
+  border: 3px solid rgba(255, 255, 255, 1);
+  transition: 0.5s;
+  /*animation: apparait 2s backwards;
+  animation-delay: 5s;*/
+} .intro button:hover {
+  color: #FFC107;
+  background: rgba(255, 255, 255, 1);
+  border: 3px solid rgba(255, 255, 255, 0);
+  transition: 0.5s;
 }
 
 /**********************************
@@ -298,7 +427,7 @@ button {
   font-style: italic;
 }
 
-/***Style vidéos***/
+/***Style bloc vidéo***/
 
 .blocvideo {
   height: 65vh;
@@ -306,16 +435,38 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: right;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.blocvideo:last-child {
+  margin-bottom: 0;
 }
 
 .blocvideo p {
-  align-self: flex-end;
+  text-align: right;
+}
+
+.videoetimage {
+  margin-bottom: 4vh;
+  position: relative;
+}
+
+#topecran {
+  margin-bottom: -0.2vh;
+  width: 48vw;
 }
 
 video {
-  height: 58vh;
-  border: 3px solid white;
+  width: 48vw;
+  margin-top: -0.2vh;
+}
+
+.imgportable {
+  position: absolute;
+  width: 9.5vw;
+  top: 20vh;
+  right: 5vw;
 }
 
 /**********************************
@@ -342,6 +493,89 @@ video {
   transform: rotate(-45deg);
 }
 
+.contact #contenucontact {
+  padding: 6vh 4vw;
+}
+
+.contact#bloccontact p {
+  font-size: 1.5em;
+}
+
+.contact#bloccontact a {
+  color: inherit;
+}
+
+/*** Style formulaire ***/
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 60vw;
+  height: 55vh;
+  background-color: #fff;
+  color: #FF9800;
+  margin: 4vh auto;
+  border-radius: 25px;
+  padding: 4% 6%;
+}
+
+form button {
+  align-self: center;
+}
+
+label {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.formrang {
+  width: 52vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formrang:nth-child(4) {
+  align-items: flex-start;
+}
+
+textarea {
+  background-color: #FF9800;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+input {
+  background-color: #FF9800;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1em;
+  height: 4vh;
+  width: 90%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 70px;
+  outline: none;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input.placeholder, textarea.placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /**********************************
       STYLE BLOC ABOUT
 *********************************/
@@ -364,6 +598,254 @@ video {
 
 .contact#boutonabout i {
   transform: rotate(45deg);
+}
+
+/***Mise en forme contenu***/
+.about #contenuabout {
+  position: relative;
+}
+
+.about #blocordonne p {
+  align-self: flex-start;
+}
+
+#blocordonne {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vh 1.5vw;
+}
+
+#blocabout h3 {
+  margin-top: 5vh;
+}
+
+/***Style boutons***/
+.boutonintecontact {
+  font-family: inherit;
+  color: #fff;
+  padding: 20px 30px;
+  margin: 4vh 2vw;
+  font-size: 1em;
+  font-weight: bold;
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 1);
+  transition: 0.5s;
+} .boutonintecontact:hover {
+  color: #FF5722;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  transition: 0.5s;
+}
+
+#liencv {
+  color: #fff;
+} .boutonintecontact:hover #liencv {
+  color: #FF5722;
+}
+
+/***Style parties icônes***/
+#blocicones, #bloclogiciels, #souspredilection, #sousnotions, #groupeboutoncontact, #blocmedias  {
+  display: flex;
+  flex-direction: row;
+}
+
+#blocpredilection, #blocnotions, .sousmedia {
+  display: flex;
+  flex-direction: column;
+}
+
+#blocicones {
+  margin: 2vh 0;
+  justify-content: space-between;
+  width: 55vw;
+}
+
+.pblocicones {
+  width: 55vw;
+  margin: 4vh auto 0 auto;
+}
+
+#blocpredilection {
+  width: 56%;
+}
+
+#blocnotions {
+  width: 44%;
+}
+
+#blocpredilection {
+  align-items: flex-start;
+}
+
+#blocnotions {
+  align-items: flex-end;
+}
+
+#souspredilection, #sousnotions {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.icones {
+  height: 76px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+} .icones:hover::after {
+  margin-top: 75px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  animation: apparait 0.3s ease-in-out alternate;
+  transition: 0.3s;
+}
+
+#bloclogiciels {
+  width: 55vw;
+  margin-top: 3vh;
+  justify-content: space-between;
+}
+
+#blocmedias {
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.sousmedia {
+  align-items: center;
+}
+
+.barreseparation {
+  width: 2px;
+  background-color: #fff;
+}
+
+#barremedia {
+  width: 2.2px;
+  height: 80px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+#invisible {
+  opacity: 0;
+}
+
+/***Détail icônes***/
+
+#htmlcinq {
+  width: 67px;
+  background-image: url(icones/html5plein.png);
+} #htmlcinq:hover {
+  background-image: url(icones/html5fil.png);
+} #htmlcinq:hover::after {
+  content: "HTML5";
+}
+
+#csstrois {
+  width: 83px;
+  background-image: url(icones/css3plein.png);
+} #csstrois:hover {
+  background-image: url(icones/css3fil.png);
+} #csstrois:hover::after {
+  content: "CSS3";
+}
+
+#js {
+  width: 76px;
+  background-image: url(icones/jsplein.png);
+} #js:hover {
+  background-image: url(icones/jsfil.png);
+} #js:hover::after {
+  content: "JavaScript";
+}
+
+#php {
+  width: 143px;
+  background-image: url(icones/phpplein.png);
+} #php:hover {
+  background-image: url(icones/phpfil.png);
+} #php:hover::after {
+  content: "PHP";
+}
+
+#sql {
+  width: 68px;
+  background-image: url(icones/sqlplein.png);
+} #sql:hover {
+  background-image: url(icones/sqlfil.png);
+} #sql:hover::after {
+  content: "SQL";
+}
+
+#ps {
+  width: 76px;
+  background-image: url(icones/psplein.png);
+} #ps:hover {
+  background-image: url(icones/psfil.png);
+} #ps:hover::after {
+  content: "Photoshop";
+}
+
+#ai {
+  width: 78px;
+  background-image: url(icones/aiplein.png);
+} #ai:hover {
+  background-image: url(icones/aifil.png);
+} #ai:hover::after {
+  content: "Illustrator";
+}
+
+#id {
+  width: 76px;
+  background-image: url(icones/idplein.png);
+} #id:hover {
+  background-image: url(icones/idfil.png);
+} #id:hover::after {
+  content: "InDesign";
+}
+
+#git {
+  width: 76px;
+  background-image: url(icones/gitplein.png);
+} #git:hover {
+  background-image: url(icones/gitfil.png);
+} #git:hover::after {
+  content: "Git";
+}
+
+#github, #deviantart {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+  transition: 0.5s;
+} #github:hover, #deviantart:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+  transition: 0.5s;
+}
+
+#github {
+  background-image: url(icones/github.png);
+}
+
+#deviantart {
+  background-image: url(icones/deviantart.png);
 }
 
 /**********************************

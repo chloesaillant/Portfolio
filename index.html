@@ -3,17 +3,56 @@
   <head>
     <link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="initial-scale=1">
     <meta charset="utf-8">
     <title>Chloé Saillant</title>
     <link rel="stylesheet" href="style.css" media="screen">
   </head>
-  <body id="body" onload="changeprojets()">
+  <body id="body" onload="animintro()">
 
     <section id="blocnom">
       <div class="titretbouton">
-        <h1>Chloé<br/>Saillant</h1>
+
+        <svg version="1.1" id="svgchloesaillant" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 123.667 88.333" enable-background="new 0 0 123.667 88.333"
+        	 xml:space="preserve">
+        <g>
+        	<path id="path1" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M29.962,54.557
+        		c-0.873-4.663-4.142-11.907-9.494-13.166c-5.05-1.188-10.89,4.841-8.175,10.506c2.131,4.446,8.52,2.405,11.536,5.734
+        		c4.298,4.746,1.415,13.721-1.565,18.457c-2.842,4.517-10.622,13.504-17.196,10.717c-7.124-3.019-3.374-16.344-1.688-22.121"/>
+        	<path id="path2" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37.557,69.747
+        		c1.211-2.969-2.431-5.688-6.52-3.538c-5.674,2.98-8.745,15.373-4.687,18.99c4.058,3.617,10.634-10.73,10.428-15.941
+        		c-1.063,2.985-3.259,13.762,0.783,14.469c4.885,0.854,9.065-15.306,10.167-18.74c-1.271,5.717-2.154,10.827-1.848,16.717
+        		c6.494-1.049,14.208-20.387,13.1-27.051c-7.84-1.795-9.881,27.883-6.264,30.961c9.549,8.124,17.807-26.609,17.024-32.885
+        		c-12.815,2.908-11.831,48.537,5.156,25.703c1.51-2.029,9.705-16.015,2.549-16.338c-5.848-0.263-7.891,16.354-4.982,18.359
+        		c4.197,2.892,7.002-13.756,7.496-18.756c0.001,6.517-3.592,14.518,0.129,20.655c6.342-3.292,5.678-15.634,11.299-20.192
+        		c2.249,5.942,1.691,16.199-0.66,21.023c-0.548-6.855,3.293-17.498,8.745-21.641c0.302,5.129-1.37,12.436,0.872,16.979
+        		c7.453-4.262,5.971-21.25,8.132-28.894c-0.2,9.54-2.315,19.523-1.313,29.025c1.439,13.647,7.848,2.926,11.408-3.842"/>
+        	<path id="path6" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M45.152,60.253
+        		c-0.27,0.911,0.488-0.952,0.633-1.266"/>
+        	<path id="path3" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M123,50.76
+        		c-7.768,2.738-17.487,1.844-24.684,5.695"/>
+        </g>
+        <g>
+        	<path id="path4" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M29.356,29.356
+        		c9.597-7.909-0.243-33.511-8.484-9.301c-3.351,9.846-6.14,30.753,9.781,30.189c14.371-0.509,22.888-19.802,24.875-31.559
+        		c0.795-4.708,2.152-17.986-6.085-17.918c-7.429,0.062-6.92,15.369-7.325,20.309c-0.858,10.454,0.384,23.71-0.786,32.954
+        		c0.145-2.906,3.248-18.165,7.628-16.17c3.386,1.542-2.229,10.272,2.543,12.284c10.668,4.498,21.434-35.025,12.748-38.96
+        		c-7.711-3.494-9.901,32.805-2.818,38.43c4.648,3.694,10.799,1.329,14.335-2.405c3.438-3.631,6.868-16.467-1.819-10.43
+        		c-4.836,3.361-4.602,16.317,2.631,17.012c8.367,0.805,6.881-11.274,3.685-15.375c5.601,2.535,11.459-4.728,7.712-5.169
+        		c-4.611-0.542-5.262,10.623-4.33,13.479c5.283,16.193,20.59-3.101,23.132-10.301"/>
+        	<path id="path5" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M82,29.5
+        		c7.753,1.256,11.979-11.265,13.666-16.833"/>
+        </g>
+        </svg>
+
       </div>
+
+      <button id="boutonintro" class="intro" type="button" onclick="changeprojets()">
+        Entrer
+      </button>
     </section>
 
     <section id="blocprojets">
@@ -22,12 +61,219 @@
           <button type="button" id="boutonprojets" onclick="changeprojets()"><i class="fa fa-angle-up"></i></button>
           <div class="animbouton"></div>
         </div>
-        <h2>Projets</h2>
+        <h2>
+          <svg version="1.1" class="motsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 width="109.167px" height="65.5px" viewBox="0 0 109.167 65.5" enable-background="new 0 0 109.167 65.5" xml:space="preserve">
+          <g>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M26,1
+          		c-2.841,11.203-4.112,21.387-9.592,31.896C15.302,35.018,3.312,57.825,1,48.5"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M13.5,13.5
+          		C10.04,8.707,32.351-5.762,34.047,6.996C35.492,17.855,13.029,37.06,2.542,35.923C2.503,35.211,2.744,34.688,3,34"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.5,41.5
+          		c-0.08,0.616-0.405,0.821-0.349,1.433c8.178,0.745,8.53-14.274,8.275-19.365c-0.284,0.026-1.078,0.023-1.351-0.014
+          		c-0.991,10.799,8.692,1.251,11.857-0.896c-0.751,6.382-6.54,12.206-6.367,18.766c5.073,0.922,14.425-7.971,13.87-13.346
+          		c-6.3-0.839-9.447,14.163-0.924,12.965c5.698-0.801,9.392-14.752,1.541-13.453c2.02,5.913,9.708-1.933,11.481-4.483
+          		c-0.432,11.206-1.742,23.452-6.021,33.896c-1.11,2.709-2.571,7.614-6.027,7.526c-3.801-0.096-3.766-3.896-2.88-6.857
+          		c2.898-9.691,16.516-13.461,22.065-21.156c2.738-3.798,4.728-9.793,4.752-14.437c-6.193-0.81-9.717,15.303-3.435,16.958
+          		c8.386,2.211,14.393-23.726,14.51-29.418c0.217,4.48-1.91,8.866-2.521,13.271c-0.309,2.231-2.209,13.861-0.402,15.556
+          		c4.432,4.153,10.138-17.875,10.422-21.301c-0.849,8.493,7.586,16.958-2.422,23.351C87.518,25.664,108.831,23.159,108,8.5"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M60,17
+          		c0.151-0.738,0.499-1.433,1-2"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M76.5,17
+          		c8.52-2.169,15.619-8.344,24-11"/>
+          </g>
+          </svg>
+
+        </h2>
       </div>
       <div class="contenu" id="contenuprojets">
         <div class="blocvideo">
-          <a href="http://www.chloesaillant.com/flex/" target="_blank"><video loop autoplay="true" src="visiteflex.mp4">Votre navigateur doit être mis à jour afin de pouvoir lire cette vidéo !</video></a>
+
+          <div class="videoetimage">
+
+          <a href="http://www.chloesaillant.com/flex/" target="_blank">
+
+            <img src="visuels/portableflex.png" class="imgportable" />
+
+            <svg version="1.1" id="topecran" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1095 57" enable-background="new 0 0 1095 57" xml:space="preserve">
+            <g>
+            	<g>
+            		<g>
+            			<g>
+            				<path fill="#F44336" d="M1046.5,1h-995C24.438,1,1,18.088,1,41.955V56h1093V41.955C1094,18.088,1073.563,1,1046.5,1z"/>
+            				<path fill="#FFFFFF" d="M1094,57H1c-0.552,0-1-0.448-1-1V41.955C0,18.429,22.622,0,51.5,0h995c28.103,0,48.5,17.645,48.5,41.955
+            					V56C1095,56.552,1094.553,57,1094,57z M2,55h1091V41.955C1093,18.804,1073.444,2,1046.5,2h-995C23.743,2,2,19.55,2,41.955V55z"
+            					/>
+            			</g>
+            		</g>
+            	</g>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M5.366,25.774
+            		c0,0,40.383,0.096,43.634-0.024C52.185,25.633,62.52,9,67.411,9c7.645,0,118.536,0,125,0c2.722,0,13.494,16.804,17.589,16.75
+            		c6.336-0.083,880.474-0.071,880.474-0.071"/>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M206.924,11.152
+            		c0,0,6.087,7.677,7.16,7.679c5.121,0.01,18.079,0.171,18.079,0.171s-6.508-7.946-7.966-7.946
+            		C220.632,11.056,206.924,11.152,206.924,11.152z"/>
+            	<g>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			18.558,34.334 12.495,40.564 18.558,47.001 		"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="27" y1="41" x2="13" y2="41"/>
+            	</g>
+            	<g>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			48.94,46.979 55.003,40.748 48.94,34.312 		"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="40" y1="41" x2="54" y2="41"/>
+            	</g>
+            	<g>
+            		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+            			M83.939,44.551c0,0-1.213,2.116-4.272,2.116c-5,0-6.666-3-6.666-6s2.001-6.334,6.167-6.334c3.503,0,4.771,3.042,4.771,3.042"/>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			80.75,38.53 85.25,38.469 85.189,33.97 		"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="182.5" y1="16" x2="189.5" y2="23"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="189.5" y1="16" x2="182.5" y2="23"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1041.153" y1="7.653" x2="1051.563" y2="18.063"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1051.563" y1="7.653" x2="1041.153" y2="18.063"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="35" x2="1078" y2="35"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="40" x2="1078" y2="40"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="45" x2="1078" y2="45"/>
+            	</g>
+            	<g>
+
+            			<rect x="1001" y="12" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" width="7" height="7"/>
+            		<g>
+            			<polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="1012,8 1005,8
+            				1005,12 1008,12 1008,15 1012,15 			"/>
+            		</g>
+            	</g>
+
+            		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="965" y1="13" x2="974" y2="13"/>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1046,41.749c0,5.109-4.142,9.251-9.251,9.251
+            		H109.251c-5.109,0-9.251-4.142-9.251-9.251v-0.498c0-5.109,4.142-9.251,9.251-9.251h927.498c5.109,0,9.251,4.142,9.251,9.251
+            		V41.749z"/>
+            </g>
+            </svg>
+            <video loop autoplay="true" preload="none">
+              <source src="visiteflex.webm" type='video/webm;codecs="vp8, vorbis"'/>
+              <source src="visiteflex.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
+              Votre navigateur doit être mis à jour afin de pouvoir lire cette vidéo !
+            </video>
+
+          </a>
+          </div>
+
           <p>— "Display:flex;" est un site interactif permettant de comprendre l'utilisation de ce système de positionnement CSS grâce à diverses animations et exercices ludiques.
+          </p>
+        </div>
+
+        <div class="blocvideo">
+
+          <div class="videoetimage">
+
+          <a href="http://www.chloesaillant.com/pinterettes/" target="_blank">
+
+            <img src="visuels/portablepinterettes.png" class="imgportable" />
+
+            <svg version="1.1" id="topecran" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1095 57" enable-background="new 0 0 1095 57" xml:space="preserve">
+            <g>
+            	<g>
+            		<g>
+            			<g>
+            				<path fill="#F44336" d="M1046.5,1h-995C24.438,1,1,18.088,1,41.955V56h1093V41.955C1094,18.088,1073.563,1,1046.5,1z"/>
+            				<path fill="#FFFFFF" d="M1094,57H1c-0.552,0-1-0.448-1-1V41.955C0,18.429,22.622,0,51.5,0h995c28.103,0,48.5,17.645,48.5,41.955
+            					V56C1095,56.552,1094.553,57,1094,57z M2,55h1091V41.955C1093,18.804,1073.444,2,1046.5,2h-995C23.743,2,2,19.55,2,41.955V55z"
+            					/>
+            			</g>
+            		</g>
+            	</g>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M5.366,25.774
+            		c0,0,40.383,0.096,43.634-0.024C52.185,25.633,62.52,9,67.411,9c7.645,0,118.536,0,125,0c2.722,0,13.494,16.804,17.589,16.75
+            		c6.336-0.083,880.474-0.071,880.474-0.071"/>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M206.924,11.152
+            		c0,0,6.087,7.677,7.16,7.679c5.121,0.01,18.079,0.171,18.079,0.171s-6.508-7.946-7.966-7.946
+            		C220.632,11.056,206.924,11.152,206.924,11.152z"/>
+            	<g>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			18.558,34.334 12.495,40.564 18.558,47.001 		"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="27" y1="41" x2="13" y2="41"/>
+            	</g>
+            	<g>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			48.94,46.979 55.003,40.748 48.94,34.312 		"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="40" y1="41" x2="54" y2="41"/>
+            	</g>
+            	<g>
+            		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+            			M83.939,44.551c0,0-1.213,2.116-4.272,2.116c-5,0-6.666-3-6.666-6s2.001-6.334,6.167-6.334c3.503,0,4.771,3.042,4.771,3.042"/>
+
+            			<polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+            			80.75,38.53 85.25,38.469 85.189,33.97 		"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="182.5" y1="16" x2="189.5" y2="23"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="189.5" y1="16" x2="182.5" y2="23"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1041.153" y1="7.653" x2="1051.563" y2="18.063"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1051.563" y1="7.653" x2="1041.153" y2="18.063"/>
+            	</g>
+            	<g>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="35" x2="1078" y2="35"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="40" x2="1078" y2="40"/>
+
+            			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="1065" y1="45" x2="1078" y2="45"/>
+            	</g>
+            	<g>
+
+            			<rect x="1001" y="12" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" width="7" height="7"/>
+            		<g>
+            			<polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="1012,8 1005,8
+            				1005,12 1008,12 1008,15 1012,15 			"/>
+            		</g>
+            	</g>
+
+            		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="965" y1="13" x2="974" y2="13"/>
+            	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M1046,41.749c0,5.109-4.142,9.251-9.251,9.251
+            		H109.251c-5.109,0-9.251-4.142-9.251-9.251v-0.498c0-5.109,4.142-9.251,9.251-9.251h927.498c5.109,0,9.251,4.142,9.251,9.251
+            		V41.749z"/>
+            </g>
+            </svg>
+            <video loop autoplay="true" preload="none">
+              <source src="visitepinterettes.webm" type='video/webm;codecs="vp8, vorbis"'/>
+              <source src="visitepinterettes.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
+              Votre navigateur doit être mis à jour afin de pouvoir lire cette vidéo !
+            </video>
+
+          </a>
+          </div>
+
+          <p>— "Pinterettes" est petit projet inspiré de Pinterest, réalisé afin d'appréhender les grands principes de PHP et la gestion de base de données SQL, ainsi que l'ajout d'un formulaire d'upload.
           </p>
         </div>
       </div>
@@ -39,46 +285,154 @@
           <button type="button" id="boutoncontact" onclick="changecontact()"><i class="fa fa-angle-right"></i></button>
           <div class="animbouton"></div>
         </div>
-        <h2>Contact</h2>
+        <h2>
+          <svg version="1.1" class="motsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 width="116.167px" height="46.5px" viewBox="0 0 116.167 46.5" enable-background="new 0 0 116.167 46.5" xml:space="preserve">
+          <g>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.453,20.219
+          		c-0.651,0.307-0.451,1.907,0.968,1.393c5.126-1.861,10.343-9.42,9.267-15.177C20.864-3.325,10.921,3.27,7.29,8.88
+          		C1.998,17.056-4.179,36.957,6.561,43.638c8.732,5.432,16.898-3.287,20.866-10.965c-3.717,5.065-3.239,15.905,5.107,11.007
+          		c7.636-4.48,4.729-15.068-4.433-13.245c-2.593,12.882,12.149-7.05,14.396-7.427c4.457-0.748,0.198,12.693,0.172,18.667
+          		c-0.347-4.09,1.061-15.433,7.912-15.952c0.229,5.263-1.231,10.767-0.48,15.889c7.697-4.34,8.134-21.343,9.934-29.147
+          		c0.072,4.131-3.66,22.943-0.601,25.259c2.48,1.878,6.094-4.849,7.363-6.726"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M54,23
+          		c3.615-0.299,11.913-6.392,16.667-8.666"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M76.667,23.667
+          		C70.434,20.596,64.021,32,67.32,37.046c4.645,7.102,7.909-8.836,8.013-13.09c0.013,4.518-2.228,9.258,1.292,12.169
+          		c2.564,2.121,6.125-1.5,6.678-4.5"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M88,21.667
+          		C83.147,22.638,81.361,36,86.002,37.542c5.258,1.747,15.346-22.496,15.329-26.962c0,5.698-3.921,23.032-0.043,27.206
+          		c7.225,7.775,11.9-8.535,14.045-13.452"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M92.667,21
+          		c5.476-1.359,12.667-2.45,16.667-6.666"/>
+          </g>
+          </svg>
+        </h2>
       </div>
       <div class="contenu" id="contenucontact">
-        <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt.
-Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas, quae cum tibi falso responsa sint, erubescas. Quis est enim, cui via ista non pateat, qui isti aetati atque etiam isti dignitati non possit quam velit petulanter, etiamsi sine ulla suspicione, at non sine argumento male dicere? Sed istarum partium culpa est eorum, qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingenii, quod ornate politeque dixisti.
-Montius nos tumore inusitato quodam et novo ut rebellis et maiestati recalcitrantes Augustae per haec quae strepit incusat iratus nimirum quod contumacem praefectum, quid rerum ordo postulat ignorare dissimulantem formidine tenus iusserim custodiri.
-Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.
-Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.
-        </p>
-        <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt.
-Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas, quae cum tibi falso responsa sint, erubescas. Quis est enim, cui via ista non pateat, qui isti aetati atque etiam isti dignitati non possit quam velit petulanter, etiamsi sine ulla suspicione, at non sine argumento male dicere? Sed istarum partium culpa est eorum, qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingenii, quod ornate politeque dixisti.
-Montius nos tumore inusitato quodam et novo ut rebellis et maiestati recalcitrantes Augustae per haec quae strepit incusat iratus nimirum quod contumacem praefectum, quid rerum ordo postulat ignorare dissimulantem formidine tenus iusserim custodiri.
-Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.
-Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.
-        </p>
+
+        <!-- <p>Chloé Saillant</p>
+        <p><a href="mailto:chloe.saillant@laposte.net">chloe.saillant@laposte.net</a></p>
+        <p>06.70.63.72.67</p> -->
+
+        <form action="contact.php" method="post">
+          <div class="formrang">
+            <label for="newpseudo">Nom :</label>
+            <input type="text" name="newpseudo" placeholder="Insérez votre nom" />
+          </div>
+          <div class="formrang">
+            <label for="newmail">E-mail :</label>
+            <input type="text" name="newmail" placeholder="Insérez votre mail" />
+          </div>
+          <div class="formrang">
+            <label for="newsujet">Sujet :</label>
+            <input type="text" name="newsujet" placeholder="Insérez le sujet du mail" />
+          </div>
+          <div class="formrang">
+            <label for="contenu">Contenu de votre message :</label>
+            <textarea name="contenu" rows="7" cols="75"></textarea>
+          </div>
+            <button type="submit" name="creer">Envoyer</button>
+
+        </form>
+
       </div>
     </section>
 
     <section id="blocabout">
       <div class="titretbouton">
-        <h2>About</h2>
+        <h2>
+          <!-- <img src="visuels/about.png" alt="About" /> -->
+          <svg version="1.1" class="motsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 width="109px" height="61.5px" viewBox="0 0 109 61.5" enable-background="new 0 0 109 61.5" xml:space="preserve">
+          <g>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8,38
+          		c8.741,0.564,5.663-20.607-3.492-6.271c-4.291,6.719-5.904,26.342,6.929,19.551c7.505-3.972,12.982-18.844,15.841-26.108
+          		c3.086-7.842,4.535-15.935,6.101-24.131c0.31,13.603-3.496,27.698-5.407,41.112c-0.722,5.065-1.201,12.875,2.039,18.514"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M18.667,26.667
+          		c4.991,11.57,22.628,4.285,28.696-1.987c4.087-4.225,9.695-12.246,6.534-18.723c-2.655-5.438-7.315-3.731-10.759,0.135
+          		c-4.854,5.449-11.394,36.871-1.135,39.953c7.483,2.248,10.429-9.663,5.299-13.809c-0.214,7.726,16.976,3.364,17.263-3.468
+          		c-6.276-1.368-12.524,9.42-10.575,14.964c3.358,9.548,13.12-1.385,13.39-8.412c0.314-8.193-8.247-10.017-6.707-2.807
+          		c1.499,7.019,9.477,0.004,11.942-3.14c-3.494,3.018-5.005,10.927-3.195,12.523c4.827,4.256,8.813-7.639,9.13-12.571
+          		c-1.807,3.176-3.124,12.349,1.588,13.379c9.729,2.127,13.104-25.131,13.925-30.649c-2.043,7.644-6.551,21.609-4.124,29.417
+          		c4.209,13.541,16.149-3.327,18.061-10.807"/>
+          	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M84,23.333
+          		c6.074,0.149,10.79-2.03,16.667-2.667"/>
+          </g>
+          </svg>
+        </h2>
         <div class="groupebouton">
           <button type="button" id="boutonabout" onclick="changeabout()"><i class="fa fa-angle-down"></i></button>
           <div class="animbouton"></div>
         </div>
       </div>
+      <article>
       <div class="contenu" id="contenuabout">
-        <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt.
-Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas, quae cum tibi falso responsa sint, erubescas. Quis est enim, cui via ista non pateat, qui isti aetati atque etiam isti dignitati non possit quam velit petulanter, etiamsi sine ulla suspicione, at non sine argumento male dicere? Sed istarum partium culpa est eorum, qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingenii, quod ornate politeque dixisti.
-Montius nos tumore inusitato quodam et novo ut rebellis et maiestati recalcitrantes Augustae per haec quae strepit incusat iratus nimirum quod contumacem praefectum, quid rerum ordo postulat ignorare dissimulantem formidine tenus iusserim custodiri.
-Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.
-Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.
-        </p>
-        <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt.
-Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas, quae cum tibi falso responsa sint, erubescas. Quis est enim, cui via ista non pateat, qui isti aetati atque etiam isti dignitati non possit quam velit petulanter, etiamsi sine ulla suspicione, at non sine argumento male dicere? Sed istarum partium culpa est eorum, qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingenii, quod ornate politeque dixisti.
-Montius nos tumore inusitato quodam et novo ut rebellis et maiestati recalcitrantes Augustae per haec quae strepit incusat iratus nimirum quod contumacem praefectum, quid rerum ordo postulat ignorare dissimulantem formidine tenus iusserim custodiri.
-Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem illum incidere qui tum forte multis erat in ore. Meministi enim profecto, Attice, et eo magis, quod P. Sulpicio utebare multum, cum is tribunus plebis capitali odio a Q. Pompeio, qui tum erat consul, dissideret, quocum coniunctissime et amantissime vixerat, quanta esset hominum vel admiratio vel querella.
-Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.
-        </p>
+
+        <div id="blocordonne">
+
+        <p>Développeuse web à la croisée des mondes, entre le graphisme et l'intégration front-end, mes compétences incluent le développement, le maquettage, et la conception d'applications web responsives et flexibles à l'aide de langages et logiciels tels que HTML5, CSS3, JavaScript, Photoshop, Illustrator etc. Située à Lyon, je suis aussi illustratrice à mes heures (ainsi que cuisinière de curries émérite, lectrice de fantastique assidue et gameuse du dimanche).</p>
+        <p>Ouverte à de nouveaux projets, je vous invite à prendre contact si mon profil vous intéresse !</p>
+        <div id="groupeboutoncontact">
+          <button type="button" class="boutonintecontact" onclick="changecontact()">Me contacter</button>
+          <button type="button" class="boutonintecontact">
+            <a id="liencv" href="cvchloesaillant.pdf" download="cv_chloesaillant" target="_blank">
+              Télécharger mon CV (en PDF)
+            </a>
+          </button>
+        </div>
+
+          <h3>Mes langages</h3>
+
+          <div id="blocicones">
+            <div id="blocpredilection">
+              <h5>De prédilection</h5>
+              <div id="souspredilection">
+                <div class="icones" id="htmlcinq"></div>
+                <div class="icones" id="csstrois"></div>
+                <div class="icones" id="js"></div>
+                <div class="barreseparation"></div>
+              </div>
+            </div>
+            <div id="blocnotions">
+              <h5>Notions</h5>
+              <div id="sousnotions">
+                <div class="barreseparation" id="invisible"></div>
+                <div class="icones" id="php"></div>
+                <div class="icones" id="sql"></div>
+              </div>
+            </div>
+          </div>
+          <p class="pblocicones">J'utilise quotidiennement HTML5 ainsi que CSS3, en incluant les outils de création de designs responsive (flexbox, media queries, etc). J'ai des notions de base dans l'utilisation de PHP et de bases de données MySQL, aussi bien en lignes de commande que via phpMyAdmin.</p>
+
+          <h3>Mes logiciels</h3>
+
+          <div id="bloclogiciels">
+            <div class="icones" id="ps"></div>
+            <div class="icones" id="ai"></div>
+            <div class="icones" id="id"></div>
+            <div class="barreseparation"></div>
+            <div class="icones" id="git"></div>
+          </div>
+          <p class="pblocicones">Je maîtrise les logiciels Photoshop et Illustrator, et j'ai une utilisation basique d'Indesign. Je sais "giter" un projet, notamment sur GitHub, réaliser un commit, des forks, clones, etc.</p>
+
+          <h3>Quoi d'autre ?</h3>
+
+          <div id="blocmedias">
+            <div class="sousmedia">
+              <a href="https://github.com/simplon-chloeS" target="_blank"><div id="github"></div></a>
+              <h5>Mon code sur GitHub</h5>
+            </div>
+            <div class="barreseparation" id="barremedia"></div>
+            <div class="sousmedia">
+              <a href="http://nimiaka.deviantart.com/" target="_blank"><div id="deviantart"></div></a>
+              <h5>Mes illustrations sur DeviantArt</h5>
+            </div>
+          </div>
+        </div>
+
       </div>
+      </article>
     </section>
 
   </body>

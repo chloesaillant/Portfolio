@@ -2,13 +2,21 @@ var blocnom = document.getElementById("blocnom");
 var blocprojets = document.getElementById("blocprojets");
 var bloccontact = document.getElementById("bloccontact");
 var blocabout = document.getElementById("blocabout");
+var boutonintro = document.getElementById("boutonintro");
 var boutonprojets = document.getElementById("boutonprojets");
 var boutoncontact = document.getElementById("boutoncontact");
 var boutonabout = document.getElementById("boutonabout");
 var body = document.getElementById("body");
 
-var all = [blocnom,blocprojets,bloccontact,blocabout,boutonprojets,boutoncontact,boutonabout,body];
+var all = [blocnom,blocprojets,bloccontact,blocabout,boutonprojets,boutoncontact,boutonabout,boutonintro,body];
 var couleurs = ['#74bfc2','#eb5850','#464e50','#fbab22'];
+
+function animintro() {
+  for (var items = 0; items < all.length; items++) {
+    all[items].removeAttribute("class");
+    all[items].className = 'intro';
+  }
+}
 
 function changeprojets() {
   for (var items = 0; items < all.length; items++) {
